@@ -6,13 +6,13 @@ numbers의 원소를 앞에서부터 하나씩 더하다가 그 합이 n보다 �
 function solution(numbers, n) {
     let answer = 0;
     for(let i=0; i<numbers.length; i++) {
-        if (answer < n) {
+        if (answer <= n) {
             answer = answer + numbers[i];
         }
-        else return answer - numbers[i-1];
+        else return answer;
     }
     return answer;
 };
 
-const result = solution([34, 5, 71, 29, 100, 34], 123);
-console.log(result); // 110
+const result = solution([58, 44, 27, 10, 100], 139);
+console.log(result);
